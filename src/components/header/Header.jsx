@@ -15,22 +15,22 @@ function Header() {
         },
         {
             id: 2,
-            url: '/',
+            url: '/about',
             title: "ჩვენ შესახებ"
         },
         {
             id: 3,
-            url: '/',
+            url: '/services',
             title: "სერვისები"
         },
         {
             id: 4,
-            url: '/',
+            url: '/products',
             title: "პროდუქტები"
         },
         {
             id: 5,
-            url: '/',
+            url: '/contact',
             title: "კონტაქტი"
         }
     ];
