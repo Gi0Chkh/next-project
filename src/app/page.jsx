@@ -29,17 +29,17 @@ export default async function Home() {
               <Link href={`/products/${data[0].id}`} className={styles.prodItem}>
                   <Image src={data[0].image_url} alt="Product image" width={324} height={162} className={styles.prodImg} />
                   <p>{data[0].name}</p>
-                  <p>{data[0].price}</p>
+                  <p>${data[0].price}</p>
               </Link>
               <Link href={`/products/${data[1].id}`} className={styles.prodItem}>
                   <Image src={data[1].image_url} alt="Product image" width={324} height={162} className={styles.prodImg} />
                   <p>{data[1].name}</p>
-                  <p>{data[1].price}</p>
+                  <p>${data[1].price}</p>
               </Link>
               <Link href={`/products/${data[2].id}`} className={styles.prodItem}>
                   <Image src={data[2].image_url} alt="Product image" width={324} height={162} className={styles.prodImg} />
                   <p>{data[2].name}</p>
-                  <p>{data[2].price}</p>
+                  <p>${data[2].price}</p>
               </Link>
           </div>
           <Button url={"/products"} title="მეტის ნახვა" />
