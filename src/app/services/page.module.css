@@ -1,0 +1,85 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.picSect {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background: url("/tea.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.picSect h1 {
+    position: absolute;
+    font-size: 64px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    color: #fff;
+}
+.iconSect {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.iconItem {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+.icon {
+    padding: 10px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+.iconItem h1 {
+    font-size: 36px;
+    color: initial;
+}
+.iconItem:hover .icon {
+    border-color: #2fff20;
+}
+#iframeSect {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#iframeSect div {
+    font-size: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.iframe {
+    width: 50%;
+    height: 450px;
+}
+@media (max-width: 768px) {
+    .picSect {
+        height: 250px;
+    }
+    .picSect h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+    .iconSect {
+        flex-direction: column;
+        gap: 25px;
+    }
+    #iframeSect {
+        flex-direction: column;
+    }
+    .iframe {
+        width: 100%;
+    }
+}
