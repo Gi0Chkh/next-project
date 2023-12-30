@@ -4,6 +4,7 @@ import React from 'react'
 import styles from "./header.module.css"
 import Link from 'next/link'
 import Image from 'next/image'
+import DarkModeToggle from '../darkModeToggle/DarkModeToggle';
 
 
 function Header() {
@@ -42,11 +43,7 @@ function Header() {
                 <h1>TeaTopia</h1>
             </div>
             <nav className={styles.headerNavbar}>
-                {/* <Link href={"/"} className={styles.active-link}>მთავარი</Link>
-                <Link href="about.html" className={styles.header-link}>ჩვენ შესახებ</Link>
-                <Link href="services.html" className={styles.header-link}>სერვისები</Link>
-                <Link href="news.html" className={styles.header-link}>სიახლეები</Link>
-                <Link href="contact.html" className={styles.header-link}>კონტაქტი</Link> */}
+                <DarkModeToggle className={styles.darkMode}/>
                 {links.map(link => (<Link href={link.url} className={styles.headerLink}>{link.title}</Link>))}
             </nav>
             <Image src={'/burger-bar.png'} width={50} height={50} alt="burger bar image" className={styles.burgerBar} />
