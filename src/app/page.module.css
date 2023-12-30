@@ -40,6 +40,8 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  color: initial;
+  text-decoration: none;
 }
 .prodImg {
   width: 324px;

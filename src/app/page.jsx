@@ -1,6 +1,7 @@
 import styles from './page.module.css'
 import Image from 'next/image'
 import Button from '@/components/button/Button';
+import Link from 'next/link';
 
 const getData = async () => {
   const res = await fetch("https://fake-coffee-api.vercel.app/api/", {
@@ -25,30 +26,30 @@ export default async function Home() {
       <section className={styles.prodSect}>
           <h1>- ახალი პროდუქტები -</h1>
           <div className={styles.prodItems}>
-              <div className={styles.prodItem}>
+              <Link href={`/products/${data[0].id}`} className={styles.prodItem}>
                   <Image src={data[0].image_url} alt="Product image" width={324} height={162} className={styles.prodImg} />
                   <p>{data[0].name}</p>
                   <p>{data[0].price}</p>
-              </div>
-              <div className={styles.prodItem}>
+              </Link>
+              <Link href={`/products/${data[1].id}`} className={styles.prodItem}>
                   <Image src={data[1].image_url} alt="Product image" width={324} height={162} className={styles.prodImg} />
                   <p>{data[1].name}</p>
                   <p>{data[1].price}</p>
-              </div>
-              <div className={styles.prodItem}>
+              </Link>
+              <Link href={`/products/${data[2].id}`} className={styles.prodItem}>
                   <Image src={data[2].image_url} alt="Product image" width={324} height={162} className={styles.prodImg} />
                   <p>{data[2].name}</p>
                   <p>{data[2].price}</p>
-              </div>
+              </Link>
           </div>
-          <Button url={"/"} title="მეტის ნახვა" />
+          <Button url={"/products"} title="მეტის ნახვა" />
       </section>
       <section className={styles.aboutSect}>
           <div className={styles.aboutWrap}>
               <h1>გაიგეთ მეტი ჩვენი ბიზნესის შესახებ</h1>
               <div className={styles.buttonWrap}>
-                <Button url={"/"} title="ჩვენ შესახებ" />
-                <Button url={"/"} title="სიახლეები" />
+                <Button url={"/about"} title="ჩვენ შესახებ" />
+                <Button url={"/services"} title="სერვისები" />
               </div>
           </div>
       </section>
